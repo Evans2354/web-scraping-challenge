@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Mission</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Pull Mars Data</a></p>
+    </div>
+  </div>
+  <div class="container">
+    
+      <div class="col-md-12">
+        <h3><strong> Latest Mars News</strong></h3>
+        <h5 class="heading"><strong>{{Mars_dict.News_title}}</strong></h5>
+        <small>{{Mars_dict.News_paragraph}}</small>
+        <p></p></br>
+        
+      </br>
+      </div>
+      <div class="container" >
+        <div class="row bg-light mb-3" style="padding-bottom: 5px; padding-left: 10px;" >
+            <div class="col-md-7" >
+                <h2>Featured Mars Image</h2>
+                <a href={{Mars_dict.img_link}} ><img src={{Mars_dict.img_link}}  alt="Responsive image" style="width:95%;"  ></a>
+                   
+            </div>
+            
+            <div class="col-md-5 ">
+                   <div class="card border-dark mb-3" style="max-width: 35rem;">
+                        <div class="card-header"><h4><strong> Weather on Mars</strong></h4></div>
+                        <div class="card-body text-dark">
+                          <h5 class="card-title"></h5>
+                          <p class="card-text">{{Mars_dict.lastest_twit}}</p>
+                        </div>
+                      </div>
+                    </br> <div><h4><strong>Mars Facts</strong></h4></div>
+                    {{Mars_dict.Mars_facts|safe}}
+            </div>
+                </div>
+            </div>
+        </div>
+      </div>
+               
+      
+      <div class="container">
+        
+        <div class="row "></br>
+            
+            <div class="col-md-8" >
+            <div class="container">
+               
+                   <div class="row " style="margin-left: 5px;">
+                    <div><h3 style=" text-align: center;"><strong> Mars Hemispheres</strong></h3></div>
+                    <hr class="my-6">
+                    <div class="col-3 col-md-6 border border-success" style="padding: 5px;">
+                        <a href={{Mars_dict.Hemisphere_img_urls[0].img_url}} target="_blank"><img src={{Mars_dict.Hemisphere_img_urls[0].img_url}}  alt="Responsive image" class="img-fluid rounded-md" style="width:80%;"></a>
+                        <div class="caption "style="font-weight: bold;"></br><h3 style="text-align: justify;"> {{Mars_dict.Hemisphere_img_urls[0].title}}</h3></div>
+                    </div>
+                        <div class="col-3 col-md-6 border border-success" style="padding: 5px;">
+                            <a href={{Mars_dict.Hemisphere_img_urls[1].img_url}} target="_blank"><img src={{Mars_dict.Hemisphere_img_urls[1].img_url}} class="img-fluid" alt="Responsive image" style="width:80%;"></a>
+                            <div class="caption "style="font-weight: bold;"></br><h3 style="text-align: justify;"> {{Mars_dict.Hemisphere_img_urls[1].title}}</h3></div>
+                        </div>
+                   
+                        <div class="col-3 col-md-6"style="padding: 5px;">
+                            <a href={{Mars_dict.Hemisphere_img_urls[2].img_url}} target="_blank"><img src={{Mars_dict.Hemisphere_img_urls[2].img_url}} class="img-fluid"  alt="Responsive image" style="width:80%;"></a>
+                            <div class="caption "style="font-weight: bold;"></br><h3 style="text-align: justify;"> {{Mars_dict.Hemisphere_img_urls[2].title}}</h3></div>
+                        </div>
+                        <div class="col-3 col-md-6" style="padding: 5px;">
+                            <a href={{Mars_dict.Hemisphere_img_urls[3].img_url}} target="_blank"><img src={{Mars_dict.Hemisphere_img_urls[3].img_url}} class="img-fluid"  alt="Responsive image" style="width:80%;"></a>
+                        <div class="caption "style="font-weight: bold;"></br><h3 style="text-align: justify;"> {{Mars_dict.Hemisphere_img_urls[3].title}}</h3></div>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-4" ></div>
+            </div></div>
+        
+    
+     
+      
+      
+      </div>
+    </div>
+
+  </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+<footer ><div class ="container">
+    <hr class="my-4">
+      <p style="background-color:lightgray;">@copyright</p>
+      <hr class="my-4">
+      
+</div></footer>
+
+</html>
+
